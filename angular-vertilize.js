@@ -47,6 +47,11 @@
             angular.element($window).bind('resize', function(){
               return $scope.$apply();
             });
+
+            // Apply styles after DOM loaded
+            angular.element($window).bind('load', function() {
+              return $scope.$apply();
+            })
           }
         ]
       };
